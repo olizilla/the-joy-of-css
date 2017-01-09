@@ -1,0 +1,16 @@
+{
+  "name": "joy-of-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "browser-sync start --server src --files src"
+  },
+  "author": "olizilla",
+  "license": "AGPL-3.0"
+}
