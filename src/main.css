@@ -10,6 +10,9 @@ section {
   height: 100vh;
   display: table;
 }
+code {
+  font-family: envy code r, "courier prime source";
+}
 .slide {
   font-weight: lighter;
   font-size: 60px;
