@@ -1,4 +1,4 @@
-# ![The joy of CSS](https://cloud.githubusercontent.com/assets/58871/21826794/d4af0a36-d780-11e6-8264-9e210e3474c5.png)
+![The joy of CSS](https://cloud.githubusercontent.com/assets/58871/21826794/d4af0a36-d780-11e6-8264-9e210e3474c5.png)
 
 > How to touch a users eyes without hurting them or freaking out.
 
