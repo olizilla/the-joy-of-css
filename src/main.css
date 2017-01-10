@@ -19,12 +19,18 @@ section {
 }
 
 code {
-  font-family: envy code r, "courier prime source";
+  font-family: envy code r, "courier prime source", monospace;
 }
 
 a {
   text-decoration: none;
   color: #333;
+}
+
+input {
+  font-family: avenir next, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 40px;
+  font-weight: 300;
 }
 
 .align-middle {
@@ -63,4 +69,19 @@ a {
   width: 260px;
   height: 80px;
   top: 90px;
+}
+
+.tableflip {
+  display: inline-block;
+  width: 60px;
+  height: 70px;
+  background: url(https://tableflip.io/img/tableflip.min.svg) no-repeat;
+  background-size: 100% auto;
+  font-size:0;
+  user-select: none;
+  opacity: 0.8;
+  transition: opacity 400ms;
+}
+.tableflip:hover {
+  opacity: 1;
 }

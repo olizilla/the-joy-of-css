@@ -29,19 +29,77 @@
     <h1 style='margin-top:-35%'>Colo<strike>u</strike>rs</h1>
   </section>
 
-  <section style='background:gold'>
-    <h1>Typograpy</h1>
-    <div id='character' style='font-size:300px; font-weight:600'></div>
-      <script>
-        const el = document.getElementById('character')
-        let charCode = 20
-        const nextChar = () => el.innerHTML = String.fromCharCode(charCode++)
-        setInterval(nextChar, 100)
-      </script>
+  <section id="hsla">
+    <div class='align-middle'>
+      <h1>Use hsla()</h1>
+      <div>
+        <div class="">
+          Hue: <input type="number" id="hue" value="51" min="0" max="255" />
+        </div>
+        <div class="">
+          Saturation: <input type="number" id="saturation" value="100" min="0" max="100" />
+        </div>
+        <div class="">
+          Lightness: <input type="number" id="brightness" value="50" min="0" max="100" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const slide = document.getElementById('hsla')
+      const h = document.getElementById('hue')
+      const s = document.getElementById('saturation')
+      const l = document.getElementById('brightness')
+      const setBackground = (e) => {
+        if (e) {
+          e.stopPropagation()
+        }
+        const color = `hsla(${h.value}, ${s.value}%, ${l.value}%, 1)`
+        slide.style.background = color
+        console.log(color)
+      }
+      setBackground()
+      ;[h,s,l].map((input) => input.addEventListener('keydown', setBackground))
+    </script>
   </section>
 
   <section>
-    <h1><strike>Animation</strike><br>ROBOTS</h1>
+    <div class='align-middle'>
+      <p>A good palette:<br/> <a href="http://clrs.cc//">http://clrs.cc/</a></p>
+      <p>A palette generator:<br/> <a href="https://palx.jxnblk.com/">https://palx.jxnblk.com/</a></p>
+      <p>Color names:<br/> <a href="http://colours.neilorangepeel.com/">http://colours.neilorangepeel.com/</a></p>
+    </div>
+  </section>
+
+  <section style='background:gold'>
+    <div class="align-middle">
+      <h1>Typograpy</h1>
+      <div id='character' style='font-size:300px; font-weight:600'></div>
+        <script>
+          const el = document.getElementById('character')
+          let charCode = 20
+          const nextChar = () => el.innerHTML = String.fromCharCode(charCode++)
+          setInterval(nextChar, 100)
+        </script>
+    </div>
+  </section>
+
+  <section>
+    <div class='align-middle'>
+      <h1>Web fonts are <strike>slow</strike> fun</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class='align-middle'>
+      <h1>Use the system font first.</h1>
+      <p style='background: #222; color: beige; text-align:left; padding: 20px 40px; font-size:30px;'>
+        <code>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";</code>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h1><strike>Shapes &amp; Animation</strike><br>ROBOTS</h1>
     <style>
       .nodebot{
         margin:0 auto;
@@ -273,6 +331,12 @@
     </div>
   </section>
 
+  <section>
+    <div class="align-middle">
+      <h1>Myths</h1>
+    </div>
+  </section>
+
   <section style='background:url(http://www.mediacurrent.com/sites/default/files/blog-image1.png) no-repeat; background-size:cover'>
     <div class="align-middle">
       <code style='display:block; padding: 1em; background:hsla(0,0%, 100%, 0.9)'>&lt;div&gt;itis</code>
@@ -354,6 +418,34 @@
     </div>
   </section>
 
+  <section>
+    <div class="align-middle">
+      <h1>"But I don't designer"</h1>
+      <p>Don't be afraid to learn</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="align-middle">
+      <ul style='text-align:left; max-width:60%; margin:0 auto; font-weight:700'>
+        <li>Black and white first</li>
+        <li>Double your whitespace</li>
+        <li>Steal like an artist </li>
+      </ul>
+      <p>
+      <a href="https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda#.1xwv6qt15">
+        7-rules-for-creating-gorgeous-ui-part-1
+      </a>
+    </p>
+    </div>
+  </section>
+
+  <section style='color: white; background:url(./puzzle.jpg) no-repeat center; background-size: cover;'>
+    <div class="align-middle">
+      <h1 style='text-shadow-dark'>More time &amp; patience required</h1>
+    </div>
+  </section>
+
   <section style='background:white'>
     <div class="align-middle">
       <div class="">
@@ -377,6 +469,7 @@
       <div style='display:block;background:hsl(10, 90%, 50%)'>
         <code>display:block</code>
       </div>
+      <hr/>
       <div style='display:inline-block; background:gold'>
         <code>display:inline-block</code>
       </div>
@@ -386,15 +479,16 @@
       <div style='display:inline-block; background:teal'>
         <code>display:inline-block</code>
       </div>
+      <hr/>
       <div style='display:inline; background:red'>
         <code>display:inline</code>
       </div>
       <div style='display:inline; background:green'>
         <code>display:inline</code>
       </div>
-      <div style='display:inline; background:blue'>
+      <span style='background:blue'>
         <code>display:inline</code>
-      </div>
+      </span>
     </div>
   </section>
 
@@ -402,15 +496,18 @@
     <div class="align-middle" style="font-size:40px">
       <h2>display</h2>
       <code>text-align:center</code>
+      <hr/>
       <div style='display:block; background:hsl(10, 100%, 30%)'>
         <code>display:block</code>
       </div>
+      <hr/>
       <div style='display:block; width:50%; background:hsl(10, 100%, 40%)'>
         <code>display:block; width:50%</code>
       </div>
       <div style='display:block; width:50%; background:hsl(10, 90%, 50%)'>
         <code>display:block; width:50%</code>
       </div>
+      <hr/>
       <div style='display:inline-block; width:50%; background:hsl(10, 100%, 40%)'>
         <code>display:inline-block; width:50%</code>
       </div>
@@ -420,32 +517,36 @@
     </div>
   </section>
 
-    <section>
-      <div class="align-middle" style="font-size:40px">
-        <h2>whitespace!</h2>
-        <code>text-align:center</code>
-        <div style='display:block; width:50%; background:hsl(10, 100%, 40%)'>
-          <code>display:block; width:50%</code>
-        </div>
-        <div style='display:block; width:50%; background:hsl(10, 90%, 50%)'>
-          <code>display:block; width:50%</code>
-        </div>
-        <div style='display:inline-block; width:50%; background:hsl(10, 100%, 40%)'>
-          <code>display:inline-block; width:50%</code>
-        </div>
-        <div style='display:inline-block; width:50%; background:hsl(10, 90%, 50%)'>
-          <code>display:inline-block; width:50%</code>
-        </div>
-        <div style='display:inline-block; width:50%; background:hsl(10, 100%, 40%)'>
-          <code>display:inline-block; width:50%</code>
-        </div><div style='display:inline-block; width:50%; background:hsl(10, 90%, 50%)'>
-          <code>display:inline-block; width:50%</code>
-        </div>
+  <section>
+    <div class="align-middle" style="font-size:40px">
+      <h2>whitespace!</h2>
+      <code>text-align:center</code>
+      <hr/>
+      <div style='display:block; width:50%; background:hsl(10, 100%, 40%)'>
+        <code>display:block; width:50%</code>
       </div>
-    </section>
+      <div style='display:block; width:50%; background:hsl(10, 90%, 50%)'>
+        <code>display:block; width:50%</code>
+      </div>
+      <hr/>
+      <div style='display:inline-block; width:50%; background:hsl(10, 100%, 40%)'>
+        <code>display:inline-block; width:50%</code>
+      </div>
+      <div style='display:inline-block; width:50%; background:hsl(10, 90%, 50%)'>
+        <code>display:inline-block; width:50%</code>
+      </div>
+      <hr/>
+      <div style='display:inline-block; width:50%; background:hsl(10, 100%, 40%)'>
+        <code>display:inline-block; width:50%</code>
+      </div
+      ><div style='display:inline-block; width:50%; background:hsl(10, 90%, 50%)'>
+        <code>display:inline-block; width:50%</code>
+      </div>
+    </div>
+  </section>
 
   <section>
-    <div class="align-top">
+    <div>
       <h5>position</h5>
       <div style="font-size: 40px; padding-bottom:15px">
         <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
@@ -458,6 +559,7 @@
           </div>
         </div>
       </div>
+      <hr/>
       <div style="font-size: 40px;">
         <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
           parent <code>display:block; padding:15px</code>
@@ -473,30 +575,49 @@
   </section>
 
   <section>
-    <div class="align-top">
-      <h5>whitespace</h5>
-      <div style="font-size: 40px; padding-bottom:15px">
-        <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
-          parent <code>display:block; padding:15px</code>
-          <div style='display:block; background:hsl(10, 100%, 50%);'>
-            child 1 <code>display:block </code>
-          </div>
-          <div style='display:block; background:hsl(10, 100%, 40%);'>
-            child 2 <code>display:block</code>
-          </div>
+    <h5>position absolute with relative parent</h5>
+    <div style="font-size: 40px; padding-bottom:15px">
+      <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
+        parent <code>display:block; padding:15px</code>
+        <div style='display:block; background:hsl(10, 100%, 50%);'>
+          child 1 <code>display:block </code>
+        </div>
+        <div style='display:block; background:hsl(10, 100%, 40%);'>
+          child 2 <code>display:block</code>
         </div>
       </div>
-      <div style="font-size: 40px;">
-        <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
-          parent <code>display:block; padding:15px</code>
-          <div style='display:block; background:hsl(10, 100%, 50%); position:relative; bottom:-200px;'>
-            <code>display:block; position:relative; bottom:-200px</code>
-          </div>
-          <div style='display:block; background:hsl(10, 100%, 40%);'>
-            <code>display:block</code>
-          </div>
+    </div>
+    <hr/>
+    <div style="font-size: 40px; position:relative;">
+      <div style='display:block; padding:15px; background:hsl(10, 20%, 80%); text-align:left'>
+        parent <code>display:block; padding:15px; position:relative</code>
+        <div style='display:block; background:hsl(10, 100%, 50%); position:absolute; bottom:-200px;'>
+          child 1 <code>display:block; position:absloute; bottom:-200px</code>
+        </div>
+        <div style='display:block; background:hsl(10, 100%, 40%);'>
+          child 2 <code>display:block</code>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="align-middle">
+      <h1>Further Reading</h1>
+      <p><a href="http://tachyons.io">http://tachyons.io</a></p>
+      <p><a href="http://cssstats.com">http://cssstats.com</a></p>
+      <p><a href="http://stylelint.io">http://stylelint.io</a></p>
+    </div>
+  </section>
+
+  <section style='position:relative;'>
+    <div class="align-middle">
+      <h1>
+        <a href="https://twitter.com/olizilla">@olizilla</a>
+      </h1>
+      <a href="https://tableflip.io" title="(╯°□°）╯︵ TABLEFLIP" >
+        <img style='height:70px; vertical-align:-10px' src='https://tableflip.io/img/tableflip.min.svg' />
+      </a>
     </div>
   </section>
 
